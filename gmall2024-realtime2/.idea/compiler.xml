@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="realtime-common" />
+        <module name="realtime-dim" />
+        <module name="realtime-dws" />
+        <module name="realtime-dwd" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="realtime-dim" target="1.8" />
-      <module name="realtime2-dim" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
