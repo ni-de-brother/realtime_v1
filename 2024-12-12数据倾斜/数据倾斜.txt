@@ -1,0 +1,29 @@
+数据倾斜：
+with t1 as (
+    select userid,
+           order_no,
+           concat(region,'-',rand()) as region,
+           product_no,
+           color_no,
+           sale_amount,
+           ts
+    from date_east
+),
+    t2 as (
+        select region,
+               count(1) as cnt
+        from t1
+        group by region
+    ),
+    t3 as (
+        select region,
+               substr(region,1,2) as re,
+               cnt
+        from t2
+    )
+select re,
+       count(1) as cnt
+from t3
+group by re;
+
+解决数据倾斜的原因：可以节省时间
