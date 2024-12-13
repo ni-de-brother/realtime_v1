@@ -1,0 +1,92 @@
+数据倾斜：
+with t1 as (
+    select userid,
+           order_no,
+           concat(region,'-',rand()) as region,
+           product_no,
+           color_no,
+           sale_amount,
+           ts
+    from date_east
+),
+    t2 as (
+        select region,
+               count(1) as cnt
+        from t1
+        group by region
+    ),
+    t3 as (
+        select region,
+               substr(region,1,2) as re,
+               cnt
+        from t2
+    )
+select re,
+       count(1) as cnt
+from t3
+group by re;
+《1》产生原因：
+数据本身的特性：
+1：键值分布不均匀
+2：数据中有大量重复值
+业务逻辑和算法设计：
+1：数据处理的分组方式不合理
+2：Join 操作关联键不均匀
+解决数据倾斜的原因：可以节省时间
+《2》带来的问题:
+1:性能下降：
+2:资源浪费：
+
+解决方法：方法1：使用的数据是8千万对8百万（在运行的时候分为map和reduce  举个例子如果是两个班级一个班级30人 一个班级100人 需要数人数
+ 很明显30人数的快 但他数完并不是往下进行而是等100人数完再一块往下进行） 
+
+给数据进行拼接字符传然后根据拼接的字段先分组,
+这样会得到一个数据都是唯一的一条 然后在把需要的数据截取出来 再次进行分组查询 这样就可以避免数据倾斜的。
+没优化代码之前运行的时间是19秒 优化后是12秒 
+
+方法2：增加 map 和reduce的数量
+怎么增加map的数量?
+------------------Map 数量调整：-----------------------
+<1>调整输入数据块大小（通过修改配置文件）
+原理：在 Hadoop 的默认配置下，一个 Map 任务通常处理一个 HDFS 数据块。
+通过减小数据块大小，可以增加数据块的数量，从而增加 Map 任务的数量。这有助于将数据划分得更细，分散原本可能集中在少数几个 Map 任务中的数据。
+操作方法：在 Hadoop 的配置文件（hadoop - conf目录下的hdfs - site.xml）中，
+修改dfs.block.size参数。例如，将其从默认的 128MB 修改为 64MB。
+修改后，重新启动 Hadoop 集群（包括 HDFS NameNode 和 DataNode 服务），
+使新的配置生效。
+需要注意的是，过小的数据块大小可能会导致过多的 Map 任务，增加任务调度和管理的开销，
+以及可能增加 NameNode 的内存压力（因为它需要管理更多的数据块元数据）。
+<2>使用 CombineFileInputFormat（通过修改作业配置）：
+原理：当处理大量小文件时，Hadoop 默认会为每个小文件启动一个 Map 任务，这可能导致 Map 任务数量过多且每个任务处理的数据量很少，效率低下。
+CombineFileInputFormat可以将多个小文件合并成一个逻辑上的输入分片，从而减少 Map 任务数量。
+但是如果想要增加 Map 数量，可以通过调整CombineFileInputFormat的相关参数来实现相反的效果。
+操作方法：在编写 MapReduce 作业时，在设置输入格式的部分，配置CombineFileInputFormat的参数。
+例如，通过设置setMaxInputSplitSize和setMinInputSplitSize来控制每个输入分片的大小。
+如果希望增加 Map 数量，可以将setMaxInputSplitSize设置得更小，这样会产生更多的输入分片，
+进而增加 Map 任务数量。
+不过这种方法需要在作业的配置代码中进行设置，如下（以 Java 为例）：
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.CombineFileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+
+public class MyMapReduceJob {
+    public static void main(String[] args) throws Exception {
+        Configuration conf = new Configuration();
+        Job job = Job.getInstance(conf, "My MapReduce Job");
+        // 设置输入格式为CombineFileInputFormat
+        job.setInputFormatClass(CombineFileInputFormat.class);
+        // 调整输入分片的最大大小为32MB（示例值，可根据实际情况调整）
+        CombineFileInputFormat.setMaxInputSplitSize(job, 32 * 1024 * 1024);
+        FileInputFormat.addInputPath(job, new Path(args[0]));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+        job.setMapperClass(MyMapper.class);
+        job.setReducerClass(MyReducer.class);
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(Text.class);
+        System.exit(job.waitForCompletion(true)? 0 : 1);
+    }
+}

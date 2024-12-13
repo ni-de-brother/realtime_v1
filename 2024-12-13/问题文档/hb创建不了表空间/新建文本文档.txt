@@ -1,0 +1,2 @@
+先去 /opt/mo../zook../ zookeep/bin下 有一个 zkCli.sh  执行 ./zkCli.sh  然后执行deleteall hbase
+然后开启hadoop去页面把hbase删除了  在在创建一个hbase 应为比执行hbase shell 回在里面写东西（就是把错误的hbase删除掉再创建）

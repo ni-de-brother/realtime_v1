@@ -13,19 +13,18 @@ import lombok.NoArgsConstructor;
 
 public class TableProcessDim {
     // 来源表名
-    String sourceTable;
-
+    String source_table;
     // 目标表名
-    String sinkTable;
+    String sink_table;
 
     // 输出字段
-    String sinkColumns;
+    String sink_columns;
 
     // 数据到 hbase 的列族
-    String sinkFamily;
+    String sink_family;
 
     // sink到 hbase 的时候的主键字段
-    String sinkRowKey;
+    String sink_row_key;
 
     // 配置表操作类型
     String op;

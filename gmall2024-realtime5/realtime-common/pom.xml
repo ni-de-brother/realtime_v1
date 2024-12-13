@@ -92,7 +92,34 @@
             <artifactId>HikariCP</artifactId>
             <version>4.0.3</version>
         </dependency>
-
+<!--        <dependency>-->
+<!--            <groupId>org.apache.hbase</groupId>-->
+<!--            <artifactId>hbase-client</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>2.4.10</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>commons-beanutils</groupId>-->
+<!--            <artifactId>commons-beanutils</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-core</artifactId>
+            <version>1.17.1</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.flink</groupId>-->
+<!--            <artifactId>flink-sql-api-java</artifactId>-->
+<!--            <version>1.17.1</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-table-api-java-bridge</artifactId>
+            <version>1.17.1</version>
+        </dependency>
     </dependencies>
 
     <profiles>
@@ -136,64 +163,64 @@
         </profile>
     </profiles>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy-conf</id>
-                        <!--default生命周期的哪个阶段-->
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>resources</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-resources-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>copy-conf</id>-->
+<!--                        &lt;!&ndash;default生命周期的哪个阶段&ndash;&gt;-->
+<!--                        <phase>process-resources</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>resources</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <!-- 设置false后是去掉 xxx-jar-with-dependencies.jar 后的 “-jar-with-dependencies” -->
-                    <!--                    <appendAssemblyId>false</appendAssemblyId>-->
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>make-assembly</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>assembly</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-assembly-plugin</artifactId>-->
+<!--                <version>2.4</version>-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash; 设置false后是去掉 xxx-jar-with-dependencies.jar 后的 “-jar-with-dependencies” &ndash;&gt;-->
+<!--                    &lt;!&ndash;                    <appendAssemblyId>false</appendAssemblyId>&ndash;&gt;-->
+<!--                    <descriptorRefs>-->
+<!--                        <descriptorRef>jar-with-dependencies</descriptorRef>-->
+<!--                    </descriptorRefs>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>make-assembly</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>assembly</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
 
-        <!--负责处理项目资源文件并拷贝到输出目录-->
-        <resources>
-            <resource>
-                <directory>src/main/resources/</directory>
-                <targetPath>./</targetPath>
-                <filtering>true</filtering>
-                <includes>
-                    <include>**/*.conf</include>
-                    <include>**/*.csv</include>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                </includes>
-                <!-- 排除标签 -->
-                <excludes>
-                    <exclude>filter/*</exclude>
-                </excludes>
-            </resource>
-        </resources>
-    </build>
+<!--        &lt;!&ndash;负责处理项目资源文件并拷贝到输出目录&ndash;&gt;-->
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>src/main/resources/</directory>-->
+<!--                <targetPath>./</targetPath>-->
+<!--                <filtering>true</filtering>-->
+<!--                <includes>-->
+<!--                    <include>**/*.conf</include>-->
+<!--                    <include>**/*.csv</include>-->
+<!--                    <include>**/*.properties</include>-->
+<!--                    <include>**/*.xml</include>-->
+<!--                </includes>-->
+<!--                &lt;!&ndash; 排除标签 &ndash;&gt;-->
+<!--                <excludes>-->
+<!--                    <exclude>filter/*</exclude>-->
+<!--                </excludes>-->
+<!--            </resource>-->
+<!--        </resources>-->
+<!--    </build>-->
 
 </project>

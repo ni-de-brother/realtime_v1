@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="realtime-common" />
+        <module name="realtime-dim" />
+        <module name="realtime-dwd-trade-refund-pay-suc-detail" />
+        <module name="realtime-dwd-trade-order-refund" />
+        <module name="realtime-dwd-base-log" />
+        <module name="realtime-dwd-trade-cart-add" />
+        <module name="realtime-dwd-trade-order-detail" />
+        <module name="realtime-dwd-trade-order-pay-suc-detail" />
+        <module name="realtime-dwd-base-db" />
+        <module name="realtime-dwd-trade-order-cancel-detai" />
+        <module name="realtime-dwd-interaction-comment-info" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

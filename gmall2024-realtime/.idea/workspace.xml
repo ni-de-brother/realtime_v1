@@ -5,57 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59dcfbc2-0b95-481e-aea6-9e6f13d012c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/TableProcessDim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/bean/TableProcessDim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/constant/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/util/FlinkSourceUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/util/HBaseUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realtime-common/src/main/java/com/bw/gmall/realtime/common/util/JdbcUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realtime-dim/src/main/java/xxx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realtime-dim/src/test/java/sss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-common/src/main/java/com/bw/gmall/realtime/common/constant/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-common/src/main/java/com/bw/gmall/realtime/common/util/FlinkSourceUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-dim/src/main/java/com/bw/gmall/realtime/dim/ss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gmall2024-realtime3/realtime-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gmall2024-realtime3/realtime-dim/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gmall2024-realtime3/realtime-dim/src/main/java/ssss.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gmall2024-realtime5/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-ads/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-common/src/main/resources/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dim/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dim/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dwd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dwd/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime-dws/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/realtime-dws/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bw/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bw/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime2/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime2/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-common/target/realtime-common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-common/target/realtime-common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-dim/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-dim/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-dim/src/main/java/com/bw/gmall/realtime/dim/DimApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-dim/src/main/java/com/bw/gmall/realtime/dim/DimApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-dim/target/classes/com/bw/gmall/realtime/dim/DimApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime2/realtime-dim/target/classes/com/bw/gmall/realtime/dim/DimApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime3/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime3/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime3/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime3/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/target/gmall2024-realtime3-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime3/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-common/src/main/java/com/bw/gmall/realtime/common/util/HBaseUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-common/src/main/java/com/bw/gmall/realtime/common/util/JdbcUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime5/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime5/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime5/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime5/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-common/src/main/java/com/bw/gmall/realtime/common/base/BaseApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-dim/src/main/java/com/bw/gmall/realtime/dim/app/DimApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-dim/src/main/java/com/bw/gmall/realtime/dim/app/DimApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-dim/target/classes/com/bw/gmall/realtime/dim/app/DimApp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-dim/target/classes/com/bw/gmall/realtime/dim/app/DimApp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-dim/target/classes/com/bw/gmall/realtime/dim/app/DimApp$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-dim/target/classes/com/bw/gmall/realtime/dim/app/DimApp$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-dim/target/classes/com/bw/gmall/realtime/dim/app/DimApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall2024-realtime5/realtime-dim/target/classes/com/bw/gmall/realtime/dim/app/DimApp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +108,7 @@
       <workItem from="1734002310186" duration="2978000" />
       <workItem from="1734008226584" duration="7000" />
       <workItem from="1734008251809" duration="71000" />
+      <workItem from="1734066662769" duration="32000" />
     </task>
     <servers />
   </component>
