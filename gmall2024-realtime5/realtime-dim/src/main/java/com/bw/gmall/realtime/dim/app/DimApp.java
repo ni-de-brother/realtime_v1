@@ -30,8 +30,8 @@ public class DimApp extends BaseApp{
                 "dim_app",
                 Constant.TOPIC_DB
         );
+//        SingleOutputStreamOperator<TableProcessDim> configStream = readTableProcess(env);
 
-        SingleOutputStreamOperator<TableProcessDim> configStream = readTableProcess(env);
     }
 
     @Override
@@ -68,7 +68,7 @@ public class DimApp extends BaseApp{
                 })
                 .map(JSON::parseObject);
     }
-    private SingleOutputStreamOperator<TableProcessDim> readTableProcess(StreamExecutionEnvironment env) {
+    private  SingleOutputStreamOperator<TableProcessDim> readTableProcess(StreamExecutionEnvironment env) {
         // useSSL=false
         Properties props = new Properties();
         props.setProperty("useSSL", "false");
@@ -76,13 +76,13 @@ public class DimApp extends BaseApp{
         MySqlSource<String> mySqlSource = MySqlSource.<String>builder()
                 .hostname(Constant.MYSQL_HOST)
                 .port(Constant.MYSQL_PORT)
-                .databaseList("gmall2023_config") // set captured database, If you need to synchronize the whole database, Please set tableList to ".*".
-                .tableList("gmall2023_config.table_process_dim") // set captured table
+                .databaseList("gmall_config") // set captured database, If you need to synchronize the whole database, Please set tableList to ".*".
+                .tableList("gmall_config.table_process_dim") // set captured table
                 .username(Constant.MYSQL_USER_NAME)
                 .password(Constant.MYSQL_PASSWORD)
                 .jdbcProperties(props)
                 .deserializer(new JsonDebeziumDeserializationSchema()) // converts SourceRecord to JSON String
-                .startupOptions(StartupOptions.initial()) // 默认值: initial  第一次启动读取所有数据(快照), 然后通过 binlog 实时监控变化数据
+                .startupOptions(StartupOptions.earliest()) // 默认值: initial  第一次启动读取所有数据(快照), 然后通过 binlog 实时监控变化数据
                 .build();
 
         return env

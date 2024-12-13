@@ -1,0 +1,33 @@
+shell脚本回到首行 ：双击gg
+             回到结尾： shift+gg
+
+在任何目录下查找一个文件 ：find / -name 文件名字
+
+查看文件里面的内容：cat 文件名字
+
+
+Flink Web UI: http://hadoop102:8081
+
+安装nc（netcat）：sudo apt - get install netcat
+
+解压到什么什么地方：tar -zxvf redis-6.2.1.tar.gz -C /opt/module/
+
+启动redis： redis-server  /opt/module/redis-stable/redis.conf
+关闭redis（不作为守护程序运行 直接关）
+测试：redis-cli 输入ping 输出PING   quit是退出测试或者exit
+
+mvn -v（cmd黑窗口可以查看maven信息）
+
+mvn clean install  idea下面的 Terminal下面运行可以缓存的依赖
+
+
+C:\Users\LEGION\.m2\repository 可以找你项目的依赖的位置
+--------------------------------git-----------------------------------
+提交推送
+git add .
+第二步，查看状态。接下来，我们可以查看文件状态，看看文件是否被添加进了 git 管理：
+git status
+第三步，提交文件更改。刚才添加的文件只是到了 git 的暂存区，我们还需要提交添加的文件：
+git commit -m "input yours message"
+第四步，推送。使用 push 命令 将本地仓库推送到远程仓库（Github）中：
+git push -u origin master
