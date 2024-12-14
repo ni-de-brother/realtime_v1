@@ -29,7 +29,7 @@ public class DimProcessFunction extends BroadcastProcessFunction<JSONObject, Tab
         //创建链接MySql
         java.sql.Connection mysqlConnection = JdbcUtil.getMysqlConnection();
         //通过链接进行查询表中数据
-        List<TableProcessDim> tableProcessDims = JdbcUtil.queryList(mysqlConnection, "select * from gmall2023_config.table_process_dim", TableProcessDim.class, true);
+        List<TableProcessDim> tableProcessDims = JdbcUtil.queryList(mysqlConnection, "select * from gmall_config.table_process_dim", TableProcessDim.class, true);
         //将数据存入到hashmap中
         for (TableProcessDim tableProcessDim : tableProcessDims) {
             hashMap.put(tableProcessDim.getSourceTable(),tableProcessDim);
